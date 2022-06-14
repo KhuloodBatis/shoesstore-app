@@ -10,6 +10,7 @@ use App\Models\Variation;
 class Product extends Model
 {
     use HasFactory;
+    
     public function formattedPrice()
     {
         return Money::USD($this->price);
