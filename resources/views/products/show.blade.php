@@ -13,7 +13,7 @@
                         Image gallery
 
                     </div>
-
+                    <span> </span>
                     <div class="col-span-1 p-6 space-y-12">
 
                         <div>
@@ -27,6 +27,12 @@
                             <p class="mt-2 text-gray-500">
                                   {{ $product->description }}
                             </p>
+
+                        </div>
+
+                        <div class="mt-6">
+
+                           <livewire:product-selector :product="$product"/>
 
                         </div>
 
