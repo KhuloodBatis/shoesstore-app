@@ -84,6 +84,8 @@ return [
 
     'locale' => 'en',
 
+    'currency' => 'SAR',
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
