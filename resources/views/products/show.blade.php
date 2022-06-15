@@ -6,33 +6,34 @@
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 
-                <div class="p-6 bg-white border-b border-gray-200 grid-cols-2 gap-4 ">
+                <div class="p-6 bg-white border-b border-gray-200 grid-cols-2  gap-4 flex justify-between">
 
                     <div class="col-span-1 grid">
 
                         Image gallery
 
                     </div>
-                    <span> </span>
-                    <div class="col-span-1 p-6 space-y-12">
+
+
+                    <div class="col-span-1 p-6 grid ">
 
                         <div>
 
-                            <h1>  {{ $product->title }}</h1>
+                            <h1> {{ $product->title }}</h1>
 
                             <h1 class="font-semibold text-xl mt-2">
-                                  
+
                                 {{ $product->formattedPrice() }}
                             </h1>
                             <p class="mt-2 text-gray-500">
-                                  {{ $product->description }}
+                                {{ $product->description }}
                             </p>
 
                         </div>
 
                         <div class="mt-6">
 
-                           <livewire:product-selector :product="$product"/>
+                            <livewire:product-selector :product="$product" />
 
                         </div>
 
