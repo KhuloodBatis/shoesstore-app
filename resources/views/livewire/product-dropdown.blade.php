@@ -14,15 +14,14 @@
         @foreach ($variations as $variation)
             <option value=" {{ $variation->id }} ">
 
-                {{ $variation->title }} {{$variation->stocks->sum('amount')}}
+                {{ $variation->title }} ({{ $variation->stockCount() }})
 
             </option>
         @endforeach
 
     </x-select>
-   @if($this->selectedVariationModel?->children->count())
-    <livewire:product-dropdown :variations="$this->selectedVariationModel->children->sortBy('order')"
-        :key="$selectedVariation"/>
-   @endif
+    @if ($this->selectedVariationModel?->children->count())
+        <livewire:product-dropdown :variations="$this->selectedVariationModel->children->sortBy('order')" :key="$selectedVariation" />
+    @endif
 
 </div>
